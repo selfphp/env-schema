@@ -67,4 +67,37 @@ echo $validatedEnv['PORT']; // 8080
 
 ## 📄 License
 
-MIT License © Damir Enseleit
+MIT License ©2025 SELFPHP - Damir Enseleit
+---
+
+## 🖥️ Run CLI Example
+
+You can quickly test your `.env` file and schema using the provided example script:
+
+```bash
+php examples/validate-env.php
+```
+
+This script:
+
+- Loads a predefined schema
+- Parses your `.env` file
+- Outputs all validated values or detailed error messages
+
+### Example Output
+
+```
+✅ .env file is valid.
+APP_ENV = 'production'
+DEBUG = true
+PORT = 8080
+APP_SECRET = 'abcd1234efgh5678ijkl9012mnop3456'
+```
+
+If validation fails, you'll see helpful errors like:
+
+```
+❌ Validation error: Missing required variable: PORT
+```
+
+> ℹ️ Make sure to install dependencies first via `composer install`.
